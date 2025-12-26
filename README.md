@@ -1,4 +1,4 @@
-
+<img width="407" height="258" alt="image" src="https://github.com/user-attachments/assets/b4fbdb92-d70a-4940-8147-cad505338937" />
 # EX-01-Datatypes-Operators
 ## AIM:
 Write a C program to read 3 characters one by one and print the characters in a reverse order.
@@ -10,8 +10,23 @@ Write a C program to read 3 characters one by one and print the characters in a 
 4.	End the program.
 
 ## PROGRAM:
+```
+#include <stdio.h>
+
+int main() {
+    char c1, c2, c3;
+    scanf(" %c", &c1);
+    scanf(" %c", &c2);
+    scanf(" %c", &c3);
+    printf("%c %c %c", c3, c2, c1);
+    return 0;
+}
+```
+
 
 ## OUTPUT:
+
+<img width="407" height="258" alt="Screenshot 2025-12-26 183925" src="https://github.com/user-attachments/assets/c3ee9c1b-7c4a-49e4-beed-3a81ba6fd099" />
 
 
 
@@ -46,10 +61,25 @@ Write a C program to read A values and check whether A is positive number or not
 6.End the program.
 
 # PROGRAM:
+```
+#include <stdio.h>
 
+int main() {
+    int A;
+    scanf("%d", &A);
+    if (A > 0) {
+        printf("Positive number");
+    } else {
+        printf("Not a positive number");
+    }
+
+    return 0;
+}
+```
 # OUTPUT:
 
 
+<img width="538" height="198" alt="image" src="https://github.com/user-attachments/assets/692ec537-6848-4003-8470-366fe484251d" />
 
 
 
@@ -80,8 +110,20 @@ Write a program to find minimum between two fraction numbers using conditional o
 7.	Print the minimum value.
 
 ## PROGRAM:
+```
+#include <stdio.h>
+int main() {
+    float a, b, min;
+    scanf("%f %f", &a, &b);
+    min = (a < b) ? a : b;
+    printf("Minimum = %.2f", min);
+    return 0;
+}
+```
 
 ## OUTPUT:
+<img width="532" height="226" alt="image" src="https://github.com/user-attachments/assets/0a33b26a-d59c-4cf0-8ce0-b5569d737436" />
+
 
 
 
@@ -111,8 +153,29 @@ Write a C program to check whether the input value is equal to 1 using simple if
 6.	End the program.
 
 ## PROGRAM:
+```
+#include <stdio.h>
+
+int main() {
+    int n;
+
+    // Read the input value
+    scanf("%d", &n);
+
+    // Check if the value is equal to 1
+    if (n == 1) {
+        printf("The value is equal to 1");
+    }
+
+    return 0;
+}
+```
 
 ## OUTPUT:
+
+
+<img width="482" height="186" alt="image" src="https://github.com/user-attachments/assets/6f535b67-c01d-4d64-ae41-04a59bd7b3e0" />
+
 
 
 
@@ -147,8 +210,44 @@ c.	Else if percentage >= 36: Print “Division = Pass”
 9.	Else: Print “Division = Fail”
 10.	End
 ## PROGRAM:
+```
+#include <stdio.h>
+
+int main() {
+    float m1, m2, m3, total, percent;
+
+    // Read marks of three subjects
+    scanf("%f %f %f", &m1, &m2, &m3);
+
+    // Calculate total and percentage
+    total = m1 + m2 + m3;
+    percent = (total / 300) * 100;
+
+    printf("Total = %.2f\n", total);
+    printf("Percentage = %.2f\n", percent);
+
+    // Check minimum marks and division
+    if (m1 >= 35 && m2 >= 35 && m3 >= 35) {
+        if (percent >= 60)
+            printf("First Division");
+        else if (percent >= 50)
+            printf("Second Division");
+        else if (percent >= 35)
+            printf("Pass");
+        else
+            printf("Fail");
+    } else {
+        printf("Fail");
+    }
+
+    return 0;
+}
+```
 
 ## OUTPUT:
+
+<img width="445" height="276" alt="image" src="https://github.com/user-attachments/assets/8fcac523-0d28-4c48-8203-3009b3a64457" />
+
 
 ## RESULT:
 The program successfully takes three subject marks, calculates the total and percentage, and correctly determines the division based on predefined grading logic.
